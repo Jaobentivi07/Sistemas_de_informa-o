@@ -1,0 +1,161 @@
+/* =========================================================
+   SEGURANÇA.EXE – estilo retrô anos 80/90
+   Paleta: azul-escuro, preto, ciano e branco
+   Visual: janelas estilo Windows 95 + terminal CRT
+   ========================================================= */
+
+:root {
+  --black: #03050c;
+  --navy: #0a1a3a;
+  --blue: #123a7a;
+  --cyan: #00e5ff;
+  --white: #f4f8ff;
+  --gray: #b9c4d8;
+  --font-title: "Press Start 2P", "Courier New", monospace;
+  --font-body: "VT323", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  line-height: 1.4;
+  /* Grade de fundo no estilo anos 80 */
+  background-image:
+    linear-gradient(rgba(0,229,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Linhas de varredura de monitor CRT (só decoração) */
+body::after {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(transparent 0 2px, rgba(0,0,0,.18) 2px 3px);
+  z-index: 100;
+}
+
+a { color: var(--cyan); }
+:focus-visible { outline: 3px dashed var(--cyan); outline-offset: 3px; }
+
+.skip { position: absolute; left: -999px; background: var(--cyan); color: var(--black); padding: 8px 12px; z-index: 200; }
+.skip:focus { left: 8px; top: 8px; }
+
+/* ---------- Barra superior ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 10px 16px;
+  background: var(--navy);
+  border-bottom: 3px solid var(--cyan);
+}
+.logo { font-family: var(--font-title); font-size: .8rem; color: var(--white); text-decoration: none; }
+.logo span { color: var(--cyan); }
+nav a { display: inline-block; margin: 0 4px; padding: 4px 10px; color: var(--white); text-decoration: none; }
+nav a:hover { background: var(--cyan); color: var(--black); }
+.menu-btn { display: none; font-family: var(--font-title); font-size: .7rem; }
+
+/* ---------- Janelas (cards) ---------- */
+.window {
+  background: var(--navy);
+  border: 2px solid var(--white);
+  box-shadow: 6px 6px 0 var(--cyan);
+}
+.titlebar {
+  background: linear-gradient(90deg, var(--blue), var(--navy));
+  border-bottom: 2px solid var(--white);
+  padding: 6px 10px;
+  font-family: var(--font-title); font-size: .6rem; color: var(--white);
+  overflow-wrap: anywhere;
+}
+.win-body { padding: 18px; }
+.win-body p { margin: 0 0 12px; max-width: 70ch; }
+.icon { font-size: 2rem; margin-bottom: 6px; }
+.example { color: var(--cyan); border-left: 4px solid var(--cyan); padding-left: 10px; }
+
+/* ---------- Layout geral ---------- */
+.hero { padding: 48px 16px 24px; }
+.hero-win { max-width: 900px; margin: 0 auto; }
+.section { max-width: 1100px; margin: 0 auto; padding: 56px 16px 8px; }
+.intro { max-width: 70ch; }
+.grid { display: grid; gap: 28px; margin-top: 24px; }
+.three { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.two { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+h1, h2, h3 { font-family: var(--font-title); line-height: 1.5; margin: 0 0 16px; }
+h1 { font-size: clamp(1.1rem, 3.6vw, 1.9rem); color: var(--cyan); text-shadow: 0 0 8px rgba(0,229,255,.7); }
+h2 { font-size: clamp(.9rem, 2.6vw, 1.3rem); color: var(--white); border-bottom: 3px double var(--cyan); padding-bottom: 10px; }
+h3 { font-size: .8rem; color: var(--cyan); }
+.lead { font-size: 1.5rem; }
+.prompt { color: var(--cyan); min-height: 1.4em; }
+.prompt::after { content: "█"; animation: blink 1s steps(2) infinite; }
+
+/* ---------- Botões ---------- */
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
+.btn, button {
+  font-family: var(--font-body); font-size: 1.3rem;
+  background: var(--white); color: var(--black);
+  border: 2px solid var(--black); padding: 8px 16px; cursor: pointer;
+  box-shadow: inset -3px -3px 0 #7a869c, inset 3px 3px 0 #fff;
+  text-decoration: none; display: inline-block;
+}
+.btn:hover, button:hover { background: var(--cyan); }
+.btn:active, button:active { box-shadow: inset 3px 3px 0 #7a869c; }
+
+/* ---------- Linha do tempo ---------- */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.tabs button { min-width: 80px; }
+.tabs button[aria-selected="true"] { background: var(--cyan); box-shadow: inset 3px 3px 0 #0088a0; }
+.panel { border: 2px solid var(--cyan); padding: 16px; background: var(--black); }
+.panel:not([hidden]) { animation: pop .25s ease-out; }
+.panel p { margin: 0; max-width: 70ch; }
+.closing { margin-top: 24px; padding: 14px; border: 2px dashed var(--cyan); max-width: 80ch; }
+
+/* ---------- Checklist ---------- */
+.checklist { list-style: none; margin: 0 0 18px; padding: 0; }
+.checklist li { margin-bottom: 10px; }
+.checklist label { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.checklist input { width: 22px; height: 22px; margin-top: 4px; accent-color: var(--cyan); flex-shrink: 0; }
+.bar { height: 26px; border: 2px solid var(--white); background: var(--black); }
+#barFill { height: 100%; width: 0; background: repeating-linear-gradient(90deg, var(--cyan) 0 14px, var(--navy) 14px 18px); transition: width .3s; }
+
+/* ---------- Rodapé ---------- */
+.footer { margin-top: 64px; background: var(--navy); border-top: 3px solid var(--cyan); padding: 28px 16px; }
+.foot-grid { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; }
+.foot-title { font-family: var(--font-title); font-size: .8rem; color: var(--cyan); }
+.footer nav a { margin: 0 8px 0 0; }
+.notice { max-width: 1100px; margin: 20px auto 0; padding-top: 14px; border-top: 1px dashed var(--gray); color: var(--gray); }
+
+/* ---------- Animações ---------- */
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes pop { from { transform: translateY(6px); opacity: 0; } }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s, transform .5s; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  body { font-size: 1.25rem; }
+  .menu-btn { display: inline-block; }
+  nav#menu { display: none; width: 100%; }
+  nav#menu.open { display: flex; flex-direction: column; }
+  nav#menu a { margin: 2px 0; }
+  .btn-row .btn { width: 100%; text-align: center; }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+.Gif-miku {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}

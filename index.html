@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Segurança.EXE – Segurança da Informação e a Internet dos anos 1970</title>
+  <meta name="description" content="Site educativo sobre Segurança da Informação e a história da internet na década de 1970, em estilo retrô anos 80/90.">
+  <!-- Fontes retrô (se estiver sem internet, o navegador usa a fonte monoespaçada padrão) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ===== BARRA DE NAVEGAÇÃO ===== -->
+<header class="topbar">
+  <a class="logo" href="#inicio">SEGURANÇA<span>.EXE</span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">MENU</button>
+  <nav id="menu" aria-label="Principal">
+    <a href="#seguranca">Conceitos</a>
+    <a href="#historia">História</a>
+    <a href="#ameacas">Ameaças</a>
+    <a href="#protecao">Proteção</a>
+    <a href="#curiosidades">Curiosidades</a>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+<!-- ===== PÁGINA INICIAL ===== -->
+<section id="inicio" class="hero">
+  <div class="window hero-win">
+    <div class="titlebar"><span>C:\SEGURANCA\INICIO.EXE</span></div>
+    <div class="win-body">
+      <p class="prompt" id="typing" data-text="C:\> carregando proteção de dados... OK">C:\> carregando proteção de dados... OK</p>
+      <h1>Segurança da Informação: Protegendo o Mundo Digital</h1>
+      <p class="lead">Dados pessoais, mensagens e fotos valem muito: proteger essas informações é o que mantém a vida digital segura. Aqui você aprende os conceitos básicos e viaja até os anos 1970, quando redes como a ARPANET e os primeiros protocolos abriram caminho para a internet que usamos hoje.</p>
+      <div class="btn-row">
+        <a class="btn" href="#seguranca">Conheça a Segurança da Informação</a>
+        <a class="btn" href="#historia">Explore a história da internet</a>
+        <a class="btn" href="#ameacas">Aprenda sobre ameaças digitais</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== O QUE É SEGURANÇA DA INFORMAÇÃO ===== -->
+<section id="seguranca" class="section">
+  <h2>O que é Segurança da Informação?</h2>
+  <p class="intro">É o conjunto de práticas e tecnologias que protege informações contra acesso indevido, alteração e perda. Ela se apoia em três pilares, conhecidos pela sigla CID.</p>
+  <div class="grid three">
+    <article class="window">
+      <div class="titlebar"><span>CONFIDENCIALIDADE.TXT</span></div>
+      <div class="win-body">
+        <div class="icon" aria-hidden="true"></div>
+        <h3>Confidencialidade</h3>
+        <p>Garante que somente pessoas autorizadas tenham acesso às informações.</p>
+        <p class="example"><strong>Exemplo:</strong> só você e o banco devem ver o saldo da sua conta, por isso é preciso senha para entrar.</p>
+      </div>
+    </article>
+    <article class="window">
+      <div class="titlebar"><span>INTEGRIDADE.TXT</span></div>
+      <div class="win-body">
+        <div class="icon" aria-hidden="true"></div>
+        <h3>Integridade</h3>
+        <p>Garante que os dados não sejam alterados indevidamente.</p>
+        <p class="example"><strong>Exemplo:</strong> a nota de um aluno no sistema da escola não pode ser mudada por quem não tem permissão.</p>
+      </div>
+    </article>
+    <article class="window">
+      <div class="titlebar"><span>DISPONIBILIDADE.TXT</span></div>
+      <div class="win-body">
+        <div class="icon" aria-hidden="true"></div>
+        <h3>Disponibilidade</h3>
+        <p>Garante que as informações e os sistemas estejam acessíveis quando necessários.</p>
+        <p class="example"><strong>Exemplo:</strong> o aplicativo do banco deve funcionar quando você precisa fazer um pagamento urgente.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== LINHA DO TEMPO ===== -->
+<section id="historia" class="section">
+  <h2>A história da internet na década de 1970</h2>
+  <p class="intro">Escolha um ano na linha do tempo (com o mouse, toque ou setas do teclado) para ler o que aconteceu.</p>
+
+  <div class="window">
+    <div class="titlebar"><span>LINHA_DO_TEMPO.EXE</span></div>
+    <div class="win-body">
+      <div class="tabs" role="tablist" aria-label="Anos da década de 1970">
+        <button role="tab" id="tab-1970" aria-controls="p-1970" aria-selected="true">1970</button>
+        <button role="tab" id="tab-1971" aria-controls="p-1971" aria-selected="false" tabindex="-1">1971</button>
+        <button role="tab" id="tab-1973" aria-controls="p-1973" aria-selected="false" tabindex="-1">1973</button>
+        <button role="tab" id="tab-1974" aria-controls="p-1974" aria-selected="false" tabindex="-1">1974</button>
+        <button role="tab" id="tab-1978" aria-controls="p-1978" aria-selected="false" tabindex="-1">1978</button>
+        <button role="tab" id="tab-1979" aria-controls="p-1979" aria-selected="false" tabindex="-1">1979</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-1970" aria-labelledby="tab-1970" tabindex="0">
+        <h3>1970 — O início de uma nova era</h3>
+        <p>A ARPANET, rede financiada pela agência americana ARPA, ligou seus primeiros computadores em 1969, em universidades e centros de pesquisa dos Estados Unidos. Em 1970 ela continuava crescendo e chegou à costa leste do país, com um nó na empresa BBN, em Massachusetts. Ela mostrou que computadores de lugares diferentes podiam trocar dados por meio de pacotes, ideia que se tornou a base da internet.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-1971" aria-labelledby="tab-1971" tabindex="0" hidden>
+        <h3>1971 — O primeiro e-mail em rede</h3>
+        <p>O engenheiro Ray Tomlinson, da BBN, criou um programa que enviava mensagens entre computadores diferentes conectados à ARPANET. Ele escolheu o símbolo @ para separar o nome do usuário do nome da máquina de destino, convenção usada até hoje nos endereços de e-mail.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-1973" aria-labelledby="tab-1973" tabindex="0" hidden>
+        <h3>1973 — A expansão internacional</h3>
+        <p>A ARPANET fez suas primeiras conexões fora dos Estados Unidos, com a University College London, no Reino Unido, e com a NORSAR, na Noruega. No mesmo período, pesquisadores passaram a estudar como conectar redes de tipos diferentes entre si, o que levou à ideia de uma "rede de redes".</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-1974" aria-labelledby="tab-1974" tabindex="0" hidden>
+        <h3>1974 — A proposta do TCP</h3>
+        <p>Vint Cerf e Bob Kahn publicaram o artigo "A Protocol for Packet Network Intercommunication", propondo um protocolo para que redes diferentes se comunicassem. Esse trabalho é a origem do TCP, peça fundamental da internet.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-1978" aria-labelledby="tab-1978" tabindex="0" hidden>
+        <h3>1978 — A evolução do TCP/IP</h3>
+        <p>Ao longo de testes feitos entre 1977 e 1978, os pesquisadores concluíram que era melhor dividir o projeto em duas camadas: o IP, que leva os pacotes de um ponto a outro, e o TCP, que controla a entrega confiável dos dados. Nascia a família de protocolos TCP/IP.</p>
+      </div>
+      <div class="panel" role="tabpanel" id="p-1979" aria-labelledby="tab-1979" tabindex="0" hidden>
+        <h3>1979 — Novas formas de comunicação</h3>
+        <p>Estudantes da Duke University e da University of North Carolina criaram a Usenet, um sistema de grupos de notícias em que pessoas discutiam assuntos variados por computador. Foi um dos primeiros espaços de conversa coletiva online.</p>
+      </div>
+    </div>
+  </div>
+  <p class="closing"><strong>Resumo:</strong> a internet moderna não surgiu de uma única invenção, mas de décadas de pesquisas, experimentos e colaboração entre muitas pessoas e instituições.</p>
+</section>
+
+<!-- ===== AMEAÇAS ===== -->
+<section id="ameacas" class="section">
+  <h2>Principais ameaças digitais</h2>
+  <p class="intro">Conhecer as ameaças é o primeiro passo para evitá-las. Cada card explica o que é o risco e como se proteger.</p>
+  <div class="grid three">
+    <article class="window"><div class="titlebar"><span>PHISHING.DOC</span></div><div class="win-body">
+      <div class="icon" aria-hidden="true"></div><h3>Phishing e golpes digitais</h3>
+      <p>Mensagens falsas que imitam bancos, lojas ou órgãos públicos para fazer você entregar dados ou pagar algo.</p>
+      <p class="example"><strong>Proteção:</strong> desconfie de urgência, confira o remetente e acesse o site oficial digitando o endereço.</p></div></article>
+    <article class="window"><div class="titlebar"><span>MALWARE.DOC</span></div><div class="win-body">
+      <div class="icon" aria-hidden="true"></div><h3>Malware e vírus</h3>
+      <p>Programas maliciosos que danificam o computador, espionam o uso ou sequestram arquivos.</p>
+      <p class="example"><strong>Proteção:</strong> baixe programas só de fontes oficiais e use antivírus atualizado.</p></div></article>
+    <article class="window"><div class="titlebar"><span>SENHAS.DOC</span></div><div class="win-body">
+      <div class="icon" aria-hidden="true"></div><h3>Roubo de senhas</h3>
+      <p>Senhas podem ser descobertas por golpes, programas espiões ou por serem fracas e repetidas.</p>
+      <p class="example"><strong>Proteção:</strong> use senhas longas e diferentes em cada serviço, com um gerenciador de senhas e autenticação em dois fatores.</p></div></article>
+    <article class="window"><div class="titlebar"><span>VAZAMENTO.DOC</span></div><div class="win-body">
+      <div class="icon" aria-hidden="true"></div><h3>Vazamento de dados</h3>
+      <p>Informações pessoais que ficam expostas por falhas de uma empresa ou serviço.</p>
+      <p class="example"><strong>Proteção:</strong> compartilhe só o necessário, troque senhas após um aviso de vazamento e fique atento a contatos suspeitos.</p></div></article>
+    <article class="window"><div class="titlebar"><span>SOCIAL.DOC</span></div><div class="win-body">
+      <div class="icon" aria-hidden="true"></div><h3>Engenharia social</h3>
+      <p>Manipulação de pessoas, e não de máquinas, para obter informações ou acesso, por exemplo alguém fingindo ser do suporte técnico.</p>
+      <p class="example"><strong>Proteção:</strong> confirme a identidade por um canal oficial antes de passar códigos ou dados.</p></div></article>
+    <article class="window"><div class="titlebar"><span>DDOS.DOC</span></div><div class="win-body">
+      <div class="icon" aria-hidden="true"></div><h3>Negação de serviço (DDoS)</h3>
+      <p>Excesso de acessos simultâneos que derruba um site ou serviço, afetando a disponibilidade.</p>
+      <p class="example"><strong>Proteção:</strong> empresas usam filtros de tráfego e serviços de mitigação; usuários devem manter seus dispositivos atualizados para não serem usados nesses ataques.</p></div></article>
+  </div>
+</section>
+
+<!-- ===== PROTEÇÃO ===== -->
+<section id="protecao" class="section">
+  <h2>Como se proteger na internet</h2>
+  <p class="intro">Marque os hábitos que você já pratica e veja seu nível de proteção. A marcação serve só para esta visita e não é salva.</p>
+  <div class="window">
+    <div class="titlebar"><span>CHECKLIST.EXE</span></div>
+    <div class="win-body">
+      <ul class="checklist" id="checklist">
+        <li><label><input type="checkbox"> Utilize senhas fortes e exclusivas.</label></li>
+        <li><label><input type="checkbox"> Ative a autenticação de dois fatores.</label></li>
+        <li><label><input type="checkbox"> Mantenha sistemas e aplicativos atualizados.</label></li>
+        <li><label><input type="checkbox"> Evite clicar em links suspeitos.</label></li>
+        <li><label><input type="checkbox"> Faça backups dos arquivos importantes.</label></li>
+        <li><label><input type="checkbox"> Verifique a segurança dos sites (cadeado e endereço correto) antes de informar dados pessoais.</label></li>
+      </ul>
+      <div class="bar" role="progressbar" aria-label="Nível de proteção" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="bar"><div id="barFill"></div></div>
+      <p id="barText" aria-live="polite">0 de 6 hábitos marcados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CURIOSIDADES ===== -->
+<section id="curiosidades" class="section">
+  <h2>Curiosidades</h2>
+  <div class="grid two">
+    <article class="window"><div class="titlebar"><span>FATO_01.TXT</span></div><div class="win-body">
+      <p>A primeira mensagem da ARPANET foi enviada em outubro de 1969, da UCLA para o Stanford Research Institute. O sistema travou depois das letras "LO", de "LOGIN".</p></div></article>
+    <article class="window"><div class="titlebar"><span>FATO_02.TXT</span></div><div class="win-body">
+      <p>Os primeiros quatro computadores da ARPANET ficavam na UCLA, no Stanford Research Institute, na UC Santa Barbara e na Universidade de Utah.</p></div></article>
+    <article class="window"><div class="titlebar"><span>FATO_03.TXT</span></div><div class="win-body">
+      <p>O programa experimental Creeper, de Bob Thomas, circulou pela ARPANET no início dos anos 1970. Ele apenas exibia uma mensagem e é lembrado como um dos primeiros programas a se mover entre computadores em rede. Depois surgiu o Reaper, criado para removê-lo.</p></div></article>
+    <article class="window"><div class="titlebar"><span>FATO_04.TXT</span></div><div class="win-body">
+      <p>Dois marcos da criptografia são dos anos 1970: a troca de chaves de Diffie e Hellman (1976) e o algoritmo RSA (1977). Em 1977 também foi publicado o padrão de criptografia DES.</p></div></article>
+    <article class="window"><div class="titlebar"><span>FATO_05.TXT</span></div><div class="win-body">
+      <p>A ARPANET só adotou oficialmente o TCP/IP em 1º de janeiro de 1983, data considerada o "nascimento" da internet como rede de redes.</p></div></article>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== RODAPÉ ===== -->
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <p class="foot-title">SEGURANÇA.EXE</p>
+      <p>Projeto educativo sobre Segurança da Informação e a história da internet nos anos 1970.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="#inicio">Início</a>
+      <a href="#seguranca">Conceitos</a>
+      <a href="#historia">História</a>
+      <a href="#ameacas">Ameaças</a>
+      <a href="#protecao">Proteção</a>
+      <a href="#curiosidades">Curiosidades</a>
+    </nav>
+  </div>
+  <p class="notice">Aviso: o conteúdo deste site tem finalidade exclusivamente de Atividades da Proz.</p>
+</footer>
+<div class="Gif-miku">
+<img src="https://media.tenor.com/MybZUJEkSBcAAAAM/hatsune-miku-pixel-art.gif" jsaction="" class="sFlh5c FyHeAf uT7N3d" style="max-width: 138px; --xGflle: 1;" alt="Hatsune Miku Pixel Art GIF - Hatsune Miku Pixel Art Pfp - Discover &amp; Share  GIFs" jsname="kn3ccd">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
